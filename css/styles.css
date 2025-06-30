@@ -89,14 +89,7 @@ ul{
 .social-icons {
     fill: #f4f4fd;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: #4d5ae5;
-    border-radius: 50%;
-}
-
-a:hover .social-icons,
-a:focus .social-icons {
-    background-color: #31d0aa;
-}
+    }
 
 .icon-box {
     background-color: #f4f4fd;
@@ -111,7 +104,10 @@ a:focus .social-icons {
 }
 /*Header section start*/
 .header {
-    border-bottom: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-navigation {
@@ -143,7 +139,7 @@ a:focus .social-icons {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     height: 4px;
     background-color: #404bbf;
@@ -180,7 +176,8 @@ a:focus .social-icons {
         to bottom,
         rgba(46, 47, 66, 0.7), 
         rgba(46, 47, 66, 0.7)),
-        url(./people-office-1.jpg);
+        url(../images/people-office-1.jpg);
+        max-width: 1440px;
 }
 
 .hero-banner-title {
@@ -210,9 +207,7 @@ a:focus .social-icons {
     min-width: 169px;
     height: 56px;
     border: none;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-banner-button:hover,
@@ -325,11 +320,28 @@ a:focus .social-icons {
 .team-socials{
     display: flex;
     gap: 24px;
-    text-align: center;
     justify-content: center;
 }
 
+.socials-item{
+    width: 40px;
+    height: 40px;
+}
 
+.team-socials-link{
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-socials-link:hover
+.team-socials-link:focus{
+    background-color: #404bbf;
+}
 /*Team section end*/
 
 /*Portfolio section start*/
@@ -356,6 +368,7 @@ a:focus .social-icons {
 .portfolio-list-item {
     background-color: #fff;
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover,
@@ -364,6 +377,7 @@ a:focus .social-icons {
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
+
 }
  
 .portfolio-card{
@@ -374,17 +388,16 @@ a:focus .social-icons {
 .overlay{
     position: absolute;
     top: 0;
-    left: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
     height: 100%;
     width: 100%;
-    background-color: #4d5ae5;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #f4f4fd;
-    padding: 20px;
 }
 
 .portfolio-card:hover .overlay,
@@ -424,6 +437,14 @@ a:focus .social-icons {
     position: relative;
 }
 
+.container-footer{
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-logo{
+    margin-right: 120px;
+}
 .bottom-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -442,7 +463,6 @@ a:focus .social-icons {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
-
 }
 
 .bottom-logo-raleway {
@@ -460,6 +480,7 @@ a:focus .social-icons {
     position: absolute;
     top: 30%;
     right:40%;
+    padding: 2px;
 }
 
 .footer-socials-title{
@@ -473,6 +494,20 @@ a:focus .social-icons {
 .footer-socials-icons{
     display: flex;
     gap: 16px;
-   
+}
+
+.footer-socials-link{
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus{
+    background-color: #31d0aa;
 }
 /*Footer section end*/
