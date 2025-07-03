@@ -178,6 +178,7 @@ ul{
         rgba(46, 47, 66, 0.7)),
         url(../images/people-office-1.jpg);
         max-width: 1440px;
+    margin: 0 auto;
 }
 
 .hero-banner-title {
